@@ -9,11 +9,14 @@
 <html>
 <head>
     <title>CelebrityProfits - Working Page</title>
-    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="css/working.css">
 </head>
 <body>
     <div class="working">
-      <span>Stiamo lavorando per aprire la pagine</span>
+        <img src="images/logo.png">
+      <span>Stiamo lavorando per aprire la pagina</span>
     </div>
+
+    <%@include file="WEB-INF/jsp/include/footer.jsp"%>
 </body>
 </html>

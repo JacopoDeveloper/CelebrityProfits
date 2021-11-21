@@ -20,6 +20,7 @@ public class IndexServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         HttpSession session = request.getSession();
         List<Celebrita> celebrities = CelebritaDAO.doRetrieveAll();
+        /*Ordinamento rank*/
         Ordinamento o = new Ordinamento();
         celebrities.sort(o);
 

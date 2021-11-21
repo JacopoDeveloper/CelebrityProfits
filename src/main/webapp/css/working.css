@@ -9,3 +9,16 @@ body{
     background: var(--black);
     color: var(--gold);
 }
+
+.working{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.working span{
+    font-size: 30px;
+    font-weight: 600;
+    margin-top: 30px;
+}

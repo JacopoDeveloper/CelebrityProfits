@@ -6,6 +6,8 @@ public class Celebrita {
     private String descrizione;
     private String immagine;
     private int posizione;
+    private String sesso;
+    private String patrimonio;
 
     public int getId() {
         return id;
@@ -45,5 +47,21 @@ public class Celebrita {
 
     public void setPosizione(int posizione) {
         this.posizione = posizione;
+    }
+
+    public String getSesso() {
+        return sesso;
+    }
+
+    public void setSesso(String sesso) {
+        this.sesso = sesso;
+    }
+
+    public String getPatrimonio() {
+        return patrimonio;
+    }
+
+    public void setPatrimonio(String patrimonio) {
+        this.patrimonio = patrimonio;
     }
 }

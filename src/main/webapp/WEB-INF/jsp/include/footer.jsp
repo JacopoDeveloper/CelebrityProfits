@@ -52,7 +52,7 @@
         <p>Indirizzo : Non lo so manco io figuati se te lo dico</p>
         <p>Copyright : e biri tu se o tnimm</p>
         <p>Versione 0.1 BETA</p>
-        <img src="images/logo.jpg">
+        <img src="./././images/logo.png">
 
         <div class="admin">
             <span><a href="${pageContext.request.contextPath}/LogServlet">Sei un amministratore? Accedi qui!</a></span>

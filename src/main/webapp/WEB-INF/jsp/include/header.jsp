@@ -13,7 +13,7 @@
 <body>
     <div class="header">
         <div class="logo">
-            <img src="images/logo.jpg">
+            <img src="./././images/logo.jpg">
         </div>
 
         <div class="ricerca">
@@ -44,8 +44,8 @@
 
 
         <div class="sezioni">
-            <span><a href="#">Uomo</a></span>
-            <span><a href="#">Donna</a></span>
+            <span><a href="${pageContext.request.contextPath}/SessoServlet?sesso=M">Uomo</a></span>
+            <span><a href="${pageContext.request.contextPath}/SessoServlet?sesso=F">Donna</a></span>
         </div>
     </div>
 

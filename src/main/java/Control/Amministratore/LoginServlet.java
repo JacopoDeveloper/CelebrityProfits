@@ -21,6 +21,7 @@ public class LoginServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String address = "";
         HttpSession session = request.getSession();
         String user = request.getParameter("user");
         String pass = request.getParameter("password");
@@ -29,12 +30,17 @@ public class LoginServlet extends HttpServlet {
 
         if (a != null) {
             session.setAttribute("admin", a);
-            RequestDispatcher dispatcher = request.getRequestDispatcher("WEB-INF/jsp/amministratore/adminPage.jsp");
-            dispatcher.forward(request, response);
+            //address = "WEB-INF/jsp/amministratore/adminPage.jsp";
+            //RequestDispatcher dispatcher = request.getRequestDispatcher("WEB-INF/jsp/amministratore/adminPage.jsp");
+            address = "/IndexServlet";
+
         } else {
             request.setAttribute("error-message", "Amministratore non trovato");
             RequestDispatcher dispatcher = request.getRequestDispatcher("/error.jsp");
             dispatcher.forward(request, response);
         }
+
+        RequestDispatcher dispatcher = request.getRequestDispatcher("/IndexServlet");
+        dispatcher.forward(request, response);
     }
 }

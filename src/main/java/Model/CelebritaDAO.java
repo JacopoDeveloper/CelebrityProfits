@@ -17,6 +17,8 @@ public class CelebritaDAO {
                 c.setDescrizione(rs.getString(3));
                 c.setImmagine(rs.getString(4));
                 c.setPosizione(rs.getInt(5));
+                c.setSesso(rs.getString(6));
+                c.setPatrimonio(rs.getString(7));
                 return c;
             }
             return null;
@@ -37,6 +39,8 @@ public class CelebritaDAO {
                 c.setDescrizione(rs.getString(3));
                 c.setImmagine(rs.getString(4));
                 c.setPosizione(rs.getInt(5));
+                c.setSesso(rs.getString(6));
+                c.setPatrimonio(rs.getString(7));
                 lista.add(c);
             }
             if(lista.size() > 0)
@@ -71,6 +75,33 @@ public class CelebritaDAO {
             throw new RuntimeException(e);
         }
     }
+
+    public static List<Celebrita> doRetrieveBySesso(String sesso) {
+        try(Connection con = ConPool.getConnection()){
+            PreparedStatement ps = con.prepareStatement("SELECT * FROM celebrita WHERE sesso=?");
+            ps.setString(1, sesso);
+            ResultSet rs = ps.executeQuery();
+            List<Celebrita> lista = new ArrayList<>();
+            while(rs.next()){
+                Celebrita c = new Celebrita();
+                c.setId(rs.getInt(1));
+                c.setNome(rs.getString(2));
+                c.setDescrizione(rs.getString(3));
+                c.setImmagine(rs.getString(4));
+                c.setPosizione(rs.getInt(5));
+                c.setSesso(rs.getString(6));
+                c.setPatrimonio(rs.getString(7));
+                lista.add(c);
+            }
+            if(lista.size() > 0)
+                return lista;
+            else
+                return null;
+        }catch (SQLException ex){
+            throw new RuntimeException(ex);
+        }
+    }
+
 
     /*public static void doUpdate(Utente utente, int id){
         try (Connection con = ConPool.getConnection()) {
