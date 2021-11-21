@@ -11,6 +11,30 @@
     <link rel="stylesheet" type="text/css" href="css/header.css">
 </head>
 <body>
+
+    <script>
+        function ricerca(tab, lists) {
+            var input = document.getElementById(tab);
+            var filtro = input.value.toUpperCase();
+            var lista = document.getElementById(lists);
+            var voci = document.getElementsByClassName("celebrity");
+            var x;
+            var i;
+            var testo;
+
+            for (i = 0; i < voci.length; i++) {
+                x = lista.getElementsByClassName("celebrity")[i];
+                testo = x.textContent || x.innerText;
+                if(testo.toUpperCase().indexOf(filtro) > -1) {
+                    voci[i].style.display = "";
+                } else {
+                    voci[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+
+
     <div class="header">
         <div class="logo">
             <img src="./././images/logo.jpg">
@@ -18,7 +42,7 @@
 
         <div class="ricerca">
             <div class="barra_di_ricerca">
-                <input type="text" class="ricerca" placeholder="Cerca" name="ricerca">
+                <input type="text" id="barra-ricerca" class="ricerca" placeholder="Cerca" name="ricerca" onkeyup="ricerca('barra-ricerca', 'elenco')">
                 <ion-icon name="search-outline"></ion-icon>
             </div>
 

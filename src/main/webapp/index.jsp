@@ -23,7 +23,7 @@
 
 <%@include file="WEB-INF/jsp/include/header.jsp"%>
 
-<div class="container_celebrities">
+<div class="container_celebrities" id="elenco">
     <c:forEach items="${celebrities}" var="celebrity">
         <div class="celebrity" style="background-image: url('${celebrity.immagine}'); background-size: cover; position: relative; top: 15px">
 
