@@ -1,0 +1,35 @@
+:root{
+    --black: #1f1f1f;
+    --white: #FFFFFF;
+    --gold: #CDA434;
+}
+
+body{
+    background-color: var(--black);
+    color: var(--gold);
+}
+
+a{
+    text-decoration: none;
+}
+
+.container_card{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.container_card .card{
+    background-color: var(--gold);
+    color: var(--black);
+    margin: 10px;
+    padding: 5px;
+    cursor: pointer;
+    border: 2px solid var(--gold);
+    border-radius: 10px;
+}
+
+.container_card .card a{
+    color: var(--black);
+}

@@ -1,0 +1,88 @@
+:root{
+    --black: #000000;
+    --white: #FFFFFF;
+    --gold: #CDA434;
+}
+
+*{
+    margin: 0;
+    font-size: 18px;
+}
+
+body{
+    background-color: black;
+    color: var(--gold);
+    margin-left: 280px; margin-right: 280px;
+}
+
+.container_form{
+    margin-left: 280px;
+    margin-right: 280px;
+    text-align: center;
+    justify-content: center;
+}
+
+.container_form .title{
+    width: 100%;
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 50px;
+}
+
+.container_form form{
+    width: 500px;
+    height: 250px;
+    margin-top: 50px;
+    margin-left: 200px;
+    padding: 20px;
+    border: 2px solid var(--gold);
+    border-radius: 15px;
+}
+
+.container_form form .title{
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: var(--gold);
+}
+
+.container_form form input{
+    width: 300px;
+    margin-bottom: 10px;
+    background-color: var(--black);
+    border: 2px solid var(--gold);
+    padding-left: 20px;
+    outline: none;
+    color: var(--gold);
+}
+
+.container_form form input::placeholder{
+    color: var(--gold);
+    opacity: 0.7;
+}
+
+.container_form form input[type=submit]{
+    width: 100px;
+    color: var(--black);
+    padding: 2px;
+    border-radius: 20px;
+    margin-top: 20px;
+    background-color: var(--gold);
+}
+
+label {
+    display: block;
+    position: relative;
+    left: 98px;
+    height: 25px;
+    cursor: pointer;
+    width: 300px;
+    border: 2px solid #CDA434;
+}
+
+#upload_photo {
+    opacity: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+

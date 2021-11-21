@@ -1,0 +1,11 @@
+:root{
+    --black: #1f1f1f;
+    --white: #FFFFFF;
+    --gold: #CDA434;
+    --darkgold: #725d13
+}
+
+body{
+    background: var(--black);
+    color: var(--gold);
+}

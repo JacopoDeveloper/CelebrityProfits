@@ -1,0 +1,71 @@
+:root{
+    --black: #1f1f1f;
+    --white: #FFFFFF;
+    --gold: #CDA434;
+    --darkgold: #725d13
+}
+
+body{
+    background: var(--black);
+    color: var(--gold);
+}
+
+
+.container_celebrities{
+    margin-left: 280px;
+    margin-right: 280px;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+.container_celebrities .celebrity{
+    width: 200px;
+    margin: 40px;
+    margin-top: 100px;
+    display: flex;;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid var(--gold);
+    border-radius: 5px;
+
+}
+
+.container_celebrities .celebrity .rank{
+    font-size: 25px;
+    color: var(--darkgold);
+}
+
+.container_celebrities .celebrity img{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.celebrity .celebrity_details {
+    margin-top: 45%;
+}
+
+.container_celebrities .celebrity .celebrity_details p{
+    font-size: 15px;
+    opacity: 1;
+}
+
+.container_celebrities .celebrity .celebrity_details .nome{
+    margin-top: 20px;
+    margin-bottom: 0;
+    opacity: 1;
+}
+
+.container_celebrities .celebrity .celebrity_details p{
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 0;
+}
+
+.container_celebrities .celebrity .celebrity_details .patrimonio{
+    margin-bottom: 10px;
+}
